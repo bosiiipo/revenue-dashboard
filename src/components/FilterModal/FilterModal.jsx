@@ -6,25 +6,30 @@ import { transactionStatusOptions, transactionTypeOptions } from '../../lib/util
 import DateInput from '../DateInput/DateInput';
 
 export const FilterModal = ({ isOpen, onClose, onApply, startDate, endDate, setStartDate, setEndDate, selectedPeriod, setSelectedPeriod }) => {
-    // const [selectedPeriod, setSelectedPeriod] = useState('');
-    // const [startDate, setStartDate] = useState(stDte);
-    // const [endDate, setEndDate] = useState(edDte);
     const [transactionType, setTransactionType] = useState([]);
     const [transactionStatus, setTransactionStatus] = useState([]);
+    const [show, setShow] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
 
-    // useEffect(() => {
-    //     setStartDate(startDate);
-    //     setEndDate(endDate);
-    // }, [startDate, endDate]);
+    useEffect(() => {
+      if (isOpen) {
+        setShow(true);
+        setTimeout(() => setIsAnimating(true), 10);
+      } else {
+        setIsAnimating(false);
+        const timer = setTimeout(() => setShow(false), 300);
+        return () => clearTimeout(timer);
+      }
+    }, [isOpen]);
 
-  if (!isOpen) return null;
+    if (!show) return null;
 
   const handlePeriodChange = (newPeriod) => {
     setSelectedPeriod(newPeriod);
 
     if (newPeriod && newPeriod !== "All time") {
-        setStartDate('');
-        setEndDate('');
+      setStartDate('');
+      setEndDate('');
     }
   };
 
@@ -50,8 +55,18 @@ export const FilterModal = ({ isOpen, onClose, onApply, startDate, endDate, setS
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-end z-[999] filter-modal">
-      <div className="bg-white rounded-l-3xl w-full max-w-md h-full p-6 relative overflow-y-auto">
+    <div
+      className={`fixed inset-0 bg-black flex items-center justify-end z-[999]
+                  transition-all duration-300 ease-in-out
+                  ${isAnimating ? "bg-opacity-50" : "bg-opacity-0 pointer-events-none"}`}
+      onClick={onClose}
+    >
+      <div 
+        className={`bg-white rounded-l-3xl w-full max-w-md h-full p-6 relative overflow-y-auto
+                    transition-transform duration-300 ease-in-out
+                    ${isAnimating ? "translate-x-0" : "translate-x-full"}`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold text-gray-900">Filter</h2>
           <button

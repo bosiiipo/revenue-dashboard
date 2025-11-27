@@ -1,0 +1,14 @@
+/* .balance {
+    border: 2px solid yellow;
+} */
+
+.balance-title {
+    font-family: "Degular";
+    font-weight: 500;
+}
+
+.info-icon {
+    font-family: "Degular";
+    font-weight: 700;
+    text-align: left;
+}

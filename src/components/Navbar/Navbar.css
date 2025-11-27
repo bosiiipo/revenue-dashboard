@@ -1,0 +1,42 @@
+.navbar {
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px;
+    border-radius: 100px;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+.center-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.nav-text{
+    color:#56616B;
+    display: flex;
+    font-family: "Degular", sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    padding: 8px 18px 8px 14px;
+}
+
+.nav-rev{
+    border-radius: 100px;
+    padding: 8px 18px 8px 14px;
+}
+
+.nav-current {
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+}

@@ -1,0 +1,32 @@
+.transactions {
+    font-family: "Degular";
+}
+
+.withdrawal{
+    background-color: #F9E3E0;
+}
+
+.purchase {
+    background-color: #E3FCF2;
+}
+
+.tx-title{
+    font-family: "Degular";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.trx-search{
+    border-radius: 100px;
+    font-family: "Degular";
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.trx-header{
+    font-family: "Degular";
+    font-weight: 700;
+    font-size: 24px;
+}

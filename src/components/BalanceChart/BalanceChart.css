@@ -1,0 +1,30 @@
+.chart{
+    /* border: 2px solid rgb(20, 20, 44); */
+    font-family: "Degular";
+    /* font-size: 500; */
+}
+
+.title {
+    color: var(--Gray-Gray-400, #56616B);
+    font-family: "Degular";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.2px;
+}
+
+.value {
+    font-family: "Degular";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.5px;
+}
+
+.chart-btn{
+    background-color: #131316;
+    border-radius: 100px;
+    color: white;
+    padding: 14px 28px;
+    width: 167px;
+}

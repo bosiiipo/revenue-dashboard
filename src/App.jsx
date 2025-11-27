@@ -21,7 +21,7 @@ const App = () => {
         <Navbar />
         
         <div className="flex w-full mt-20">
-          <Sidebar className="w-[10%]" />
+          <Sidebar className="w-[5%]" />
 
           <main className="flex-1 px-4">
 
@@ -39,7 +39,7 @@ const App = () => {
             </section>
           </main>
           
-          <aside className="w-[10%]" />
+          <aside className="w-[5%]" />
         </div>
       </div>
     </QueryClientProvider>

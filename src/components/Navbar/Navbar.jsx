@@ -20,26 +20,45 @@ const Navbar = () => {
             </div>
         </div>
         <div className="max-w-7xl mx-auto center-nav">
-            <div className="flex items-center mr-7">
-                <HomeLogo />
-                <span className="nav-text">Home</span>
+            <div className="group">
+                <div className="flex items-center mr-7 px-3 rounded-[100px] transition-all duration-200
+                                group-hover:bg-gray-100 group-hover:opacity-75 cursor-pointer">
+                    <HomeLogo className="w-5 h-5" />
+                    <span className="nav-text ml-2">Home</span>
+                </div>
             </div>
-            <div className="flex items-center mr-7">
-                <AnalyticsLogo />
-                <span className="nav-text">Analytics</span>
+
+            <div className="group">
+                <div className="flex items-center mr-7 px-3 rounded-[100px] transition-all duration-200
+                                group-hover:bg-gray-100 cursor-pointer">
+                    <AnalyticsLogo className="w-5 h-5" />
+                    <span className="nav-text ml-2">Analytics</span>
+                </div>
             </div>
-            <div className="flex items-center mr-7 bg-black nav-rev">
-                <PaymentsLogo />
-                <span className="nav-text nav-current text-white">Revenue</span>
+
+            <div className="group">
+                <div className="flex items-center mr-7 px-3 rounded-[100px] bg-black cursor-pointer">
+                    <PaymentsLogo className="w-5 h-5" />
+                    <span className="nav-text ml-2 !text-white">Revenue</span>
+                </div>
             </div>
-            <div className="flex items-center mr-7">
-                <CrmLogo />
-                <span className="nav-text">CRM</span>
+
+            <div className="group">
+                <div className="flex items-center mr-7 px-3 rounded-[100px] transition-all duration-200
+                                group-hover:bg-gray-100 cursor-pointer">
+                    <CrmLogo className="w-5 h-5" />
+                    <span className="nav-text ml-2">CRM</span>
+                </div>
             </div>
-            <div className="flex items-center mr-7">
-                <WidgetsLogo />
-                <span className="nav-text">Apps</span>
+
+            <div className="group">
+                <div className="flex items-center mr-7 px-3 rounded-[100px] transition-all duration-200
+                                group-hover:bg-gray-100 cursor-pointer">
+                    <WidgetsLogo className="w-5 h-5" />
+                    <span className="nav-text ml-2">Apps</span>
+                </div>
             </div>
+
         </div>
         <div className="flex items-center gap-5 pr-10">
             <BellIcon />

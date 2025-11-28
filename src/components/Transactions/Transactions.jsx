@@ -3,6 +3,7 @@ import './Transactions.css'
 import { useTransactions } from '../../lib/hooks/api/useTransactions';
 import Header from './Header';
 import TransactionCard from './TransactionCard';
+import NoResults from '../NoResults/NoResults';
 
 export const Transactions = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -156,13 +157,18 @@ export const Transactions = () => {
       <hr className="border-gray-300 mb-4" />
 
       <div className="space-y-3">
-        {filteredTransactions.map((transaction) => (
-          <TransactionCard 
-            key={transaction.id}
-            transaction={transaction}
-          />
-        ))}
-      </div>
+  {/* {filteredTransactions?.length > 0 ? ( */}
+    {filteredTransactions.map((transaction) => (
+       <NoResults />
+    ))}
+  {/* ) : ( */}
+    {/* <TransactionCard 
+      key={transaction.id}
+      transaction={transaction}
+    /> */}
+  {/* )} */}
+</div>
+
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import { useUser } from "../../lib/hooks/api/useUser";
+import './ProfileCard.css'
 
 const ProfileCard = () => {
   const { data: user } = useUser();
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handler = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -19,7 +19,6 @@ const ProfileCard = () => {
 
   return (
     <div className="relative" ref={dropdownRef}>
-      {/* Profile button */}
       <div
         className="flex items-center gap-3 bg-[#F1F3F6] px-2 py-1 rounded-full cursor-pointer"
         onClick={() => setOpen(!open)}
@@ -38,9 +37,8 @@ const ProfileCard = () => {
         </div>
       </div>
 
-      {/* Dropdown */}
       {open && (
-        <div className="absolute right-0 mt-2 w-64 bg-white shadow-xl rounded-2xl p-4 z-50 animate-fade-in">
+        <div className="absolute right-0 mt-2 w-64 bg-white shadow-xl rounded-2xl p-4 z-50 animate-fade-in drop">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center font-semibold">
               {user?.first_name?.[0]}

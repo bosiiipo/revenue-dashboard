@@ -157,16 +157,16 @@ export const Transactions = () => {
       <hr className="border-gray-300 mb-4" />
 
       <div className="space-y-3">
-  {/* {filteredTransactions?.length > 0 ? ( */}
-    {filteredTransactions.map((transaction) => (
-       <NoResults />
-    ))}
-  {/* ) : ( */}
-    {/* <TransactionCard 
-      key={transaction.id}
-      transaction={transaction}
-    /> */}
-  {/* )} */}
+  {filteredTransactions?.length > 0 ? (
+    filteredTransactions.map((transaction) => (
+      <TransactionCard 
+        key={transaction.id}
+        transaction={transaction}
+      />
+    ))
+  ) : (
+    <NoResults />
+  )}
 </div>
 
     </div>

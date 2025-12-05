@@ -1,16 +1,37 @@
-# React + Vite
+## Introduction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project provides a revenue dashboard for visualizing key financial metrics. It addresses the need for a centralized, real-time view of revenue data, enabling data-driven decision-making.
 
-Currently, two official plugins are available:
+The primary benefit is the ability to quickly identify trends and anomalies in revenue streams. The dashboard also offers customizable visualizations, allowing you to tailor the display to specific business needs. Finally, the project is designed for easy integration with existing data sources, minimizing setup time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+*   Visualize key revenue metrics in real-time.
+*   Filter data by date range, product, and region.
+*   Generate customizable reports in CSV format.
+*   View interactive charts and graphs.
+    *   Line charts display revenue trends over time.
+    *   Bar charts compare revenue across different categories.
+    *   Pie charts show revenue distribution.
+*   Receive email alerts for significant revenue changes.
+*   Integrate with existing data sources via API.
+*   Customize the dashboard's appearance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To set up the revenue-dashboard, follow these steps:
+
+1.  git clone https://github.com/bosiiipo/revenue-dashboard.git
+    
+
+2.  cd revenue-dashboard
+
+3. npm install
+   
+
+4.  Use env vairiables from .env.example
+
+## Usage
+
+npm run dev
